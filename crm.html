@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button id="logoutButton">Logout</button>
+    </header>
+
+    <div class="crm-container">
+        <h2>Leads</h2>
+        <form id="leadForm">
+            <input type="text" id="fio" placeholder="Full Name" required>
+            <input type="text" id="company" placeholder="Company" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <button type="submit">Create Lead</button>
+        </form>
+        <div id="leadList"></div>
+    </div>
+
+    <!-- Модальное окно для редактирования лида -->
+    <div id="editLeadModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Lead</h2>
+            <form id="editLeadForm">
+                <input type="text" id="editFio" placeholder="Full Name" required>
+                <input type="text" id="editCompany" placeholder="Company" required>
+                <input type="tel" id="editPhone" placeholder="Phone Number" required>
+                <input type="email" id="editEmail" placeholder="Email Address" required>
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="crm.js"></script>
+</body>
+</html>
